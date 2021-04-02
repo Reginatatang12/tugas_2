@@ -33,8 +33,18 @@ class _BerandaState extends State<Beranda> {
         child: new ListView(
           children: <Widget>[
             new UserAccountsDrawerHeader(
-              accountName: new Text("Regina Tatang"),
-              accountEmail: new Text("Regina.tatang@undiksha.ac.id"),
+              accountName: new Text(
+                "Regina Tatang",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+              accountEmail: new Text(
+                "Regina.tatang@undiksha.ac.id",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
               currentAccountPicture: new GestureDetector(
                 onTap: () {},
                 child: new CircleAvatar(
@@ -44,7 +54,7 @@ class _BerandaState extends State<Beranda> {
               ),
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/appimages/bg.jpg'),
+                    image: AssetImage('assets/appimages/bg.jpeg'),
                     fit: BoxFit.cover),
               ),
             ),

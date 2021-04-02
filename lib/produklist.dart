@@ -41,27 +41,6 @@ class _ProduklistState extends State<Produklist> {
               onTap: () {
                 Navigator.of(context).push(new MaterialPageRoute(
                   builder: (BuildContext context) => DetailProduk(
-                    nama: "Ayam Songkem (dada)",
-                    deskripsi: "Ayam bumbu hitam madura + sambal merah",
-                    harga: 18000,
-                    gambar: "ayam.jpeg",
-                    star: 4,
-                  ),
-                ));
-              },
-              child: ProdukBox(
-                nama: "Ayam songkem (dada)",
-                deskripsi:
-                    "Ayam bumbu hitam yang dipadukan dengan sambal merah ",
-                harga: 18000,
-                gambar: "ayam.jpeg",
-                star: 4,
-              ),
-            ),
-            new GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) => DetailProduk(
                     nama: "Bebek Songkem (dada)",
                     deskripsi: "Bebek bumbu hitam madura + sambal merah",
                     harga: 18000,
@@ -77,47 +56,6 @@ class _ProduklistState extends State<Produklist> {
                 harga: 18000,
                 gambar: "bebek aja.jpeg",
                 star: 5,
-              ),
-            ),
-            new GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) => DetailProduk(
-                    nama: "Bebek Songkem (paha) ",
-                    deskripsi: "Bebek goreng bumbu hitam + sambal merah",
-                    harga: 18000,
-                    gambar: "bebek aja.jpeg",
-                    star: 5,
-                  ),
-                ));
-              },
-              child: ProdukBox(
-                  nama: "Bebek Songkem (paha)",
-                  deskripsi:
-                      "bebek goreng dipadukan dengan bumbu hitam dan sambal merah",
-                  harga: 18000,
-                  gambar: "bebek aja.jpeg",
-                  star: 5),
-            ),
-            new GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) => DetailProduk(
-                    nama: "PakMur ",
-                    deskripsi: "Paket murah Ati ampla + Nasi putih",
-                    harga: 10000,
-                    gambar: "atiampla.jpeg",
-                    star: 4,
-                  ),
-                ));
-              },
-              child: ProdukBox(
-                nama: "PakMur",
-                deskripsi:
-                    "Paket Ati ampla bumbu songkem & sambel merah + nasi ",
-                harga: 10000,
-                gambar: "aatiampla.jpeg",
-                star: 4,
               ),
             ),
             new GestureDetector(
@@ -144,30 +82,10 @@ class _ProduklistState extends State<Produklist> {
               onTap: () {
                 Navigator.of(context).push(new MaterialPageRoute(
                   builder: (BuildContext context) => DetailProduk(
-                    nama: "Es coklat",
-                    deskripsi: "Es coklat kamoya",
-                    harga: 13000,
-                    gambar: "coklat.jpeg",
-                    star: 3,
-                  ),
-                ));
-              },
-              child: ProdukBox(
-                nama: "Es coklat ",
-                deskripsi: "Es coklat kamoya",
-                harga: 13000,
-                gambar: "coklat.jpeg",
-                star: 3,
-              ),
-            ),
-            new GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) => DetailProduk(
                     nama: "Sandwich",
                     deskripsi: "Roti lapis isi daging dan selada",
                     harga: 15000,
-                    gambar: "camilan.jpg",
+                    gambar: "camilan.jpeg",
                     star: 4,
                   ),
                 ));
@@ -176,7 +94,7 @@ class _ProduklistState extends State<Produklist> {
                 nama: "Sandwich",
                 deskripsi: "Roti lapis isi daging, tomat dan selada",
                 harga: 15000,
-                gambar: "camilan.jpg",
+                gambar: "camilan.jpeg",
                 star: 4,
               ),
             ),
@@ -195,7 +113,6 @@ class ProdukBox extends StatelessWidget {
   final String gambar;
   final int star;
   final children = <Widget>[];
-
   Widget build(BuildContext context) {
     for (var i = 0; 1 < star; i++) {
       children.add(new Icon(
@@ -204,7 +121,6 @@ class ProdukBox extends StatelessWidget {
         color: Colors.deepOrange,
       ));
     }
-
     return Container(
         padding: EdgeInsets.all(10),
         child: Card(

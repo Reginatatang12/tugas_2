@@ -12,7 +12,7 @@ class Aboutapp extends StatelessWidget {
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("bg.jpeg"),
+            image: AssetImage('appimages/bg.jpeg'),
             fit: BoxFit.cover,
           ),
         ),

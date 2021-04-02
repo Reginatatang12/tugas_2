@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './beranda.dart' as Beranda;
 import './produklist.dart' as Listproduk;
 import './about.dart' as About;
+import 'ui/home.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -48,6 +49,15 @@ class _MyAppstate extends State<MyApp> with SingleTickerProviderStateMixin {
           new Tab(icon: new Icon(Icons.info)),
         ]),
       ),
+    );
+  }
+
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Tambahkan Daftar Menu',
+      theme: ThemeData(primarySwatch: Colors.lightBlue),
+      home: Home(),
     );
   }
 }
